@@ -2,5 +2,13 @@
 	<strong>Pregunta: 
 	<text style="color:blue"><%= quiz.pregunta %> <p><br /></text></strong> 
 	<input type="text" style="color:blue" name="respuesta" value=""Responda aquí"">
-	<input type="submit" value="Enviar"></p>
+	<input type="submit" value="Enviar"></p><br />
 </form>
+
+<p><a href="/quizes/<%= quiz.id %>/comments/new"><button>Nuevo comentario</button></a></p>
+<p><strong>Comentarios:</strong></p>
+<text style="color:blue">
+<%for(index in quiz.Comments){%>
+	<p>- <%=quiz.Comments[index].texto%></p>
+<%}%>
+</text>
