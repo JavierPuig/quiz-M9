@@ -39,7 +39,28 @@ app.use(function(req, res, next){
     next();
 });
 
-app.use('/', routes);
+// app.use('/', routes);
+
+app.use('/', function(req, res, next) {
+    var hora = new Date();
+    var hora_anterior = req.session.time ? new Date(req.session.time) : new Date();
+    if (!req.path.match(/\/login|\/logout/)) {
+        if ((hora.getMinutes() - 2) >= hora_anterior.getMinutes()) {
+           req.session.errors = [{"message": 'Ha caducado la sesión, REALIZA LOGIN.'}];
+           delete req.session.user;
+           res.render('sessions/new', {errors: req.session.errors});
+        } 
+        else {
+            // hay que actualizar la hora almacenada
+            req.session.time = new Date();
+            next();
+        }
+    }
+    else {
+            next();
+    }
+}, routes);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
