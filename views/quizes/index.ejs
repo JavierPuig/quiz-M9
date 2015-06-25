@@ -1,6 +1,6 @@
 <form method="get" action="/quizes">
 	<strong>Buscar preguntas con el texto:</strong><p><br />
-	<input type="text" style="color:blue" name="search" value="Texto a buscar">
+	<input type="text" class="Azul" name="search" value="Texto a buscar">
 	<input type="submit" value="Enviar">
 </form>
 <table>
@@ -16,7 +16,7 @@
 					</button>
 				</form>
 			</td>
-			<td><text style="color:blue"><%= quizes[i].tema %></text></td>
+			<td><text class="ResaltaVerde"><%= quizes[i].tema %></text></td>
 		<%}%>
 	</tr>
 <% } %>

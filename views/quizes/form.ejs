@@ -1,9 +1,9 @@
 <label for="preg" class="rem"><strong>Pregunta:</strong></label>
-<input type="text" style="color:blue" id="preg" name="quiz[pregunta]" value="<%= quiz.pregunta %>"/><p><br />
+<input type="text" class="ResaltaAzul" id="preg" name="quiz[pregunta]" value="<%= quiz.pregunta %>"/><p><br />
 <label for="resp" class="rem"><strong>Respuesta:</strong></label>
-<input type="text" style="color:blue" id="resp" name="quiz[respuesta]" value="<%= quiz.respuesta %>"/><p><br />
+<input type="text" class="ResaltaAzul" id="resp" name="quiz[respuesta]" value="<%= quiz.respuesta %>"/><p><br />
 <label for="tema" class="rem"><strong>Tema:</strong></label>
-<select name="quiz[tema]" style="color:blue">
+<select name="quiz[tema]" class="ResaltaVerde">
   <option value="otro" <% if (quiz.tema === 'otro') { %> selected <% } %>>Otro</option>
   <option value="humanidades" <% if (quiz.tema === 'humanidades') { %> selected <% } %>>Humanidades</option>
   <option value="ocio" <% if (quiz.tema === 'ocio') { %> selected <% } %>>Ocio</option>
