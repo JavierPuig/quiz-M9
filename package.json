@@ -1,5 +1,5 @@
 {
-  "name": "quiz2",
+  "name": "quiz",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
     "npm": "1.4.x"
   },
   "devDependencies": {
-    "sqlite3": "^3.0.4"
+    "sqlite3": "^3.0.8"
   },
   "dependencies": {
     "body-parser": "~1.8.1",
@@ -20,12 +20,14 @@
     "express": "~4.9.0",
     "express-partials": "^0.3.0",
     "express-session": "^1.11.3",
+    "fs": "0.0.2",
+    "http": "0.0.0",
+    "jade": "~1.6.0",
     "method-override": "^2.3.1",
     "morgan": "~1.3.0",
     "pg": "^4.1.1",
     "pg-hstore": "^2.3.2",
     "sequelize": "^2.0.0-rc4",
-    "serve-favicon": "~2.1.3",
-    "sqlite3": "^3.0.8"
+    "serve-favicon": "~2.1.3"
   }
 }
